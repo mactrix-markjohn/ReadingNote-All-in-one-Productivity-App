@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppRead"
+    tools:context="com.mactrix.www.readingnotepro.ReadingRoom">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pdfholder">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/readviewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#bfbfbf"/>
+
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:visibility="invisible"
+        android:id="@+id/appbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:visibility="invisible"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_centerInParent="true"
+                android:text="The Reading Room"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/backing"
+                android:id="@+id/readingback"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/readingmenu"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/moring"/>
+
+        </RelativeLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/smalllayou"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:elevation="10dp"
+
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/changevie"
+                android:layout_width="30dp"
+                android:padding="2dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/sreenrotateblack"/>
+            <ImageView
+                android:id="@+id/zoomou"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/scrolltype"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/changevie"/>
+            <ImageView
+                android:id="@+id/zoomi"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:rotation="150"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/zoomou"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/nightmood"/>
+            <ImageView
+                android:id="@+id/goint"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="1.2dp"
+                android:layout_toRightOf="@+id/changevie"
+                android:layout_centerInParent="true"
+                android:src="@drawable/forwardpage"
+                android:layout_marginLeft="50dp"/>
+            <ImageView
+                android:id="@+id/writenot"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2.5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/goint"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/ic_fountain_pen"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="15dp"
+        android:scrollbars="vertical"
+        android:id="@+id/largerlayout"
+        android:background="#cc000000">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/stroking"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/readingcance"
+            android:src="@drawable/canceling01"
+            android:padding="10dp"/>
+
+        <ImageButton
+            android:id="@+id/donewritin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/check"
+            android:elevation="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/stroking"
+            android:layout_above="@+id/readingcance"/>
+        <EditText
+            android:id="@+id/readingnot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider"
+            android:background="@color/transperent"
+            android:layout_above="@+id/donewritin"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:elevation="10dp"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:paddingTop="5dp"
+            android:gravity="top"
+            android:hint="Enter your Note here"
+            android:textColorHint="#88ffffff"
+            android:textColor="#ffffff"
+            />
+        <LinearLayout
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:layout_below="@+id/readingtitl"
+            android:background="#88ffffff"/>
+        <EditText
+            android:id="@+id/readingtitl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/stroking"
+            android:elevation="10dp"
+            android:scrollbars="vertical"
+            android:singleLine="true"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:textColor="#ffffff"
+            android:hint="Enter Title here"
+            android:textColorHint="#88ffffff"/>
+
+    </RelativeLayout>
+
+
+
+    <include layout="@layout/bottomsheetreading"
+        android:visibility="gone" />
+
+
+
+
+
+
+
+    <ScrollView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/readingspace"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </HorizontalScrollView>
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/previous"
+            android:src="@drawable/leftarrow"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rightarrow"
+            android:id="@+id/next"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/readinglist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"
+        android:visibility="gone"/>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

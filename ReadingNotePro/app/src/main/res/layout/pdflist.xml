@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/pdfimage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6.5dp"
+        android:src="@drawable/pdfskin"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/circling"/>
+    <TextView
+        android:id="@+id/pdfname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pdfimage"
+        android:textColor="#000000"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toLeftOf="@+id/pdfmore"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:text="Android Note For Professional"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pdfsize"
+        android:layout_below="@+id/pdfname"
+        android:layout_toRightOf="@+id/pdfimage"
+        android:layout_toLeftOf="@+id/pdfmore"
+        android:textSize="9sp"
+        android:textColor="#aa000000"
+        android:text="20.55MB"
+        android:layout_marginLeft="9dp"
+        android:maxLines="1"/>
+
+    <ImageView
+        android:id="@+id/pdfmore"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/moring"
+        android:padding="3dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"/>
+
+
+
+
+
+</RelativeLayout>

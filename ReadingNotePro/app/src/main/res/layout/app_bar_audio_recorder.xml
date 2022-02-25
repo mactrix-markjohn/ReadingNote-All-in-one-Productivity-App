@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppRead"
+    tools:context="com.mactrix.www.readingnotepro.AudioRecorder">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000000"
+                android:textSize="21sp"
+                android:text="Audio Recorder"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <ImageView
+                android:id="@+id/backing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backing"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottoming">
+
+            <TextView
+                android:id="@+id/recordtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:text="Recording"
+                android:textSize="15sp"
+                />
+            <ImageView
+                android:id="@+id/recordimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_toLeftOf="@+id/recordtext"
+                android:src="@drawable/recorinding"/>
+
+            <TextView
+                android:id="@+id/recordcounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="90sp"
+                android:text="00:00"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_below="@+id/recordtext"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/playbackcounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="90sp"
+                android:visibility="gone"
+                android:text="00:00"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:layout_below="@+id/recordtext"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/stopsignal"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recordcounter"
+                android:layout_toLeftOf="@+id/outputtext"
+                android:src="@drawable/stoping"/>
+
+            <TextView
+                android:id="@+id/outputtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                android:text="readingaudiorecording1120.3gpp"
+                android:layout_below="@+id/recordcounter"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/discardbutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/outputtext"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"
+                android:text="Discard"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/strokingblack"/>
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_below="@+id/outputtext"
+                android:layout_marginTop="10dp"
+                android:text="Save"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/strokingblack"/>
+
+            <ImageView
+                android:id="@+id/playbutton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="invisible"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/discardbutton"
+                android:src="@drawable/play_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <SeekBar
+                android:id="@+id/playseekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_toRightOf="@+id/playbutton"
+                android:layout_below="@+id/discardbutton"
+                android:layout_marginTop="10dp"
+                android:thumbTint="#000000"
+                android:progressTint="#000000"
+                android:progressBackgroundTint="#000000"
+                />
+
+            <ImageView
+                android:id="@+id/mainrecordbutton"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/playbutton"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/rec01"/>
+            <ImageView
+                android:id="@+id/pauserecbutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/playbutton"
+                android:layout_marginTop="110dp"
+                android:layout_toLeftOf="@+id/mainrecordbutton"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/pause_button"/>
+            <ImageView
+                android:id="@+id/stopbutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/playbutton"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/ic_stop2" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true">
+
+                <!--com.startapp.android.publish.ads.banner.Banner
+                    android:id="@+id/startAppBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-2742716340205774/8051292096">
+                </com.google.android.gms.ads.AdView-->
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottoming"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88000000"/>
+
+            <ImageView
+                android:id="@+id/mainlist"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/serverblack"/>
+            <ImageView
+                android:id="@+id/writing"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/videoblack"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/bottomsheetaudiostudy"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/audionote"
+        android:visibility="invisible"
+        android:elevation="20dp"
+        android:background="#cc000000">
+
+
+        <Button
+            android:id="@+id/donewritin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SAVE"
+            android:fontFamily="casual"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:elevation="10dp"
+            android:layout_above="@+id/cancelbutton"
+            android:background="@drawable/stroking"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/cancelbutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/stroking"
+            android:fontFamily="casual"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:elevation="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="CANCEL" />
+        <EditText
+            android:id="@+id/readingnot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transperent"
+            android:layout_below="@+id/divider"
+            android:layout_above="@+id/donewritin"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:elevation="10dp"
+            android:scrollbars="vertical"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:paddingTop="5dp"
+            android:gravity="top"
+            android:hint="Enter your Note here"
+            android:textColorHint="#88ffffff"
+            android:textColor="#ffffff"
+            />
+        <LinearLayout
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_below="@+id/readingtitl"
+            android:background="#ffffff"/>
+        <EditText
+            android:id="@+id/readingtitl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/stroking"
+            android:elevation="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:scrollbars="vertical"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:hint="Enter Title here"
+            android:textColor="#ffffff"
+            android:textColorHint="#88ffffff"/>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

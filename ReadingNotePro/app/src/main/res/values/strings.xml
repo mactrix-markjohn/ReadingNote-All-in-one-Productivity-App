@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pro Note</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_introduction">Introduction</string>
+    <string name="title_activity_reading_room">ReadingRoom</string>
+    <string name="title_activity_media_store">MediaStore</string>
+    <string name="title_activity_study_store">StudyStore</string>
+    <string name="title_activity_notepad">Notepad</string>
+    <string name="title_activity_video_study">VideoStudy</string>
+    <string name="title_activity_video_study_xtra">VideoStudyXtra</string>
+    <string name="title_activity_audio_recorder">AudioRecorder</string>
+    <string name="title_activity_video_recorder">VideoRecorder</string>
+    <string name="title_activity_audio_study">AudioStudy</string>
+    <string name="title_activity_search_class">SearchClass</string>
+    <string name="title_activity_text_recognition">TextRecognition</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>

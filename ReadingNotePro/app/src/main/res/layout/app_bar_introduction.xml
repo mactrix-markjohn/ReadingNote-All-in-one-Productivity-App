@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mactrix.www.readingnotepro.Introduction">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/propic"
+        android:scaleType="fitXY"
+        /-->
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/backintro"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#45000000"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pro"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:textSize="13sp"
+            android:textColor="#aaffffff"
+
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Read, Write, Speak and Listen"/>
+
+        <!--ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_above="@+id/pro"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/notebooks"/-->
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/topimage"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/blackproicon"/>
+
+        <TextView
+            android:id="@+id/pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/topimage"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp"
+            android:textColor="#88ffffff"
+            android:layout_marginLeft="30dp"
+            android:text="Pro Note"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Mactrix"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="#88ffffff"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="15sp"/>
+
+
+
+
+    </RelativeLayout>
+
+
+    <!--include layout="@layout/content_introduction" /-->
+
+    <!--android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /-->
+
+</android.support.design.widget.CoordinatorLayout>

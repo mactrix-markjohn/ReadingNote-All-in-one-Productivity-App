@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppRead"
+    tools:context="com.mactrix.www.readingnotepro.MediaStore">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            <ImageView
+                android:id="@+id/backing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backing"
+                android:layout_marginLeft="10dp"
+                android:layout_above="@+id/tablayout"
+                android:layout_marginBottom="15dp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/tablayout"
+                android:layout_marginBottom="15dp"
+                android:textColor="#000000"
+                android:text="MediaStore"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="25sp"
+                />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#000000"
+                app:tabTextColor="#000000"
+                app:tabSelectedTextColor="#000000"
+                app:tabMode="fixed"
+                android:layout_below="@+id/toolbar"
+                app:tabGravity="fill"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/bottomlayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
+
+            <ImageView
+                android:id="@+id/studystore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/listblack"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/videorecorder"
+                android:layout_marginRight="50dp"
+                />
+            <ImageView
+                android:id="@+id/videorecorder"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/videoblack"
+                android:layout_toLeftOf="@+id/newnote"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                />
+            <ImageView
+                android:id="@+id/newnote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/addblack"
+                android:layout_centerInParent="true"
+
+                />
+            <ImageView
+                android:id="@+id/audiorecorder"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/recordblack"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/newnote"
+                android:layout_marginLeft="50dp"
+                />
+            <ImageView
+                android:id="@+id/library"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/books"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/audiorecorder"
+                android:layout_marginLeft="50dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/adlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/bottomlayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Study Store"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="18sp"/>
+            <!--com.startapp.android.publish.ads.banner.Banner
+                android:id="@+id/startAppBanner"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-2742716340205774/9437908844">
+            </com.google.android.gms.ads.AdView-->
+
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_above="@+id/adlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/viewpager"/>
+
+    </RelativeLayout>
+
+
+
+    <!--include layout="@layout/content_media_store" /-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

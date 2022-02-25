@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    android:id="@+id/bottomsheetaudiostudy"
+    android:clipToPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:id="@+id/smalllayout"
+        android:background="#00000000">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#88000000"/>
+
+        <ImageView
+            android:id="@+id/mainlist"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/serverblack"/>
+        <ImageView
+            android:id="@+id/writing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/writting_ballpen"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/largelayout"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:visibility="gone"
+        android:background="#aa000000">
+        <ImageButton
+            android:id="@+id/donewriting"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/check"
+            android:elevation="10dp"
+            android:background="@color/appgreenex"
+            android:layout_alignParentBottom="true"/>
+        <EditText
+            android:id="@+id/readingnote"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/transperent"
+            android:layout_above="@+id/donewriting"
+            android:inputType="textMultiLine"
+            android:elevation="10dp"
+            android:scrollbars="vertical"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:paddingTop="5dp"
+            android:gravity="top"
+            android:hint="Enter your Note here"
+            android:textColorHint="#88ffffff"
+            android:textColor="#ffffff"
+            />
+        <LinearLayout
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="vertical"
+            android:layout_above="@+id/readingnote"
+            android:background="#88ffffff"/>
+        <EditText
+            android:id="@+id/readingtitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/transperent"
+            android:layout_above="@+id/divider"
+            android:elevation="10dp"
+            android:singleLine="true"
+            android:scrollbars="vertical"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingStart="7dp"
+            android:textColor="#ffffff"
+            android:hint="Enter Title here"
+            android:textColorHint="#88ffffff"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

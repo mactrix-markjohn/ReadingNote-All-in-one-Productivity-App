@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <ListView
+        android:id="@+id/librarylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:divider="#00000000"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/waitinglayout"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/fetchbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#99000000"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Please Wait "/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fetchbook"
+            android:layout_centerHorizontal="true"
+            android:textColor="#99000000"
+            android:text="the Library is Fetching your Books.."
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-smallcaps" />
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/fetchbook"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/progress"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mactrix.www.readingnotepro.Notepad">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/backing"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <TextView
+                android:id="@+id/notepad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="26sp"
+                android:textColor="#000000"
+                android:text="NotePad"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:text="Pro Note"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="21dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/notepad"/>
+
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/moring"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"/>
+
+        </RelativeLayout>
+
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/righttool"
+            android:layout_width="50dp"
+            android:elevation="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ffffff">
+
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/addblack"
+                android:padding="4dp"/>
+
+
+            <ImageView
+                android:id="@+id/listenpad"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/add"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/microphoneline"
+                android:padding="2dp"/>
+
+
+            <ImageView
+                android:id="@+id/list"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/listblack"
+                android:padding="4dp"
+                android:layout_below="@+id/listenpad"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/cancelblack"
+                android:layout_below="@+id/list"
+                android:padding="4dp"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/video"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/videoblack"
+                android:layout_below="@+id/delete"
+                android:padding="3dp"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/record"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/recordblack"
+                android:padding="2dp"
+                android:layout_below="@+id/video"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/audiostore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/serverblack"
+                android:padding="3dp"
+                android:layout_below="@+id/record"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/videostore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/videostore"
+                android:padding="2dp"
+                android:layout_below="@+id/audiostore"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/videostore"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/speakpad"
+                android:src="@drawable/speakerphone"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/padholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55ffffff"
+            android:layout_toLeftOf="@+id/righttool">
+
+            <EditText
+                android:id="@+id/padtitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/strokingblack"
+                android:singleLine="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:elevation="1dp"
+                android:hint="Enter Title here"
+                android:paddingLeft="10dp"/>
+            <EditText
+                android:id="@+id/padnote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/padtitle"
+                android:background="#ffffff"
+                android:elevation="1dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:scrollbars="vertical"
+                android:inputType="textMultiLine"
+                android:hint="Enter Note here"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:gravity="top"
+                android:layout_marginTop="4dp"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--include layout="@layout/content_notepad" /-->
+
+    <!--android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /-->
+
+</android.support.design.widget.CoordinatorLayout>

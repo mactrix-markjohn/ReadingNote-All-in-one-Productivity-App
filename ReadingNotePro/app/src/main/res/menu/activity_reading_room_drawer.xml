@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/microphoneline"
+            android:title="Audio Recording" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/videoblack"
+            android:title="Video Recording" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/notebook"
+            android:title="Take Note" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/serverblack"
+            android:title="Media Store" />
+
+        <item
+            android:id="@+id/studystore"
+            android:icon="@drawable/listblack"
+            android:title="Study Store" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share Our App" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_thumb_up_black_24dp"
+                android:title="Rate our App" />
+        </menu>
+    </item>
+
+</menu>

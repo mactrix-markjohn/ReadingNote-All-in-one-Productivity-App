@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/continuous"
+            android:title="Continuous"
+            android:checkable="true"
+            android:orderInCategory="1"/>
+        <item android:id="@+id/singlepage"
+            android:title="Single Page"
+            android:checkable="true"
+            android:orderInCategory="0"/>
+        <item android:id="@+id/continuous2"
+            android:title="Continuous II"
+            android:checkable="true"
+            android:orderInCategory="2"/>
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/pageno"
+        android:title="Page Count"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
+    <item android:id="@+id/currentpage"
+        android:title="Current Page"
+        android:orderInCategory="3"
+        app:showAsAction="never"/>
+    <item android:id="@+id/readout"
+        android:title="Read Out PDF"
+        android:orderInCategory="0"/>
+    <item android:id="@+id/stopread"
+        android:title="Stop Reading"
+        android:orderInCategory="1"/>
+    <item android:title="Auto Read Out"
+        android:orderInCategory="2">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/onreadout"
+                    android:title="ON ReadOut"
+                    android:checkable="true"/>
+                <item android:id="@+id/offreadout"
+                    android:title="OFF ReadOut"
+                    android:checkable="true"/>
+
+            </group>
+        </menu>
+
+
+    </item>
+
+
+
+</menu>

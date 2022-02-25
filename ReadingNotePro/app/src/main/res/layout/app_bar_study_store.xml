@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mactrix.www.readingnotepro.StudyStore">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#ffffff"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000000"
+                android:text="Study Store"
+                android:textSize="25sp"/>
+
+            <ImageView
+                android:id="@+id/backing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backing"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/bottomlayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#aa000000"/>
+
+            <ImageView
+                android:id="@+id/studystore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/books"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/videorecorder"
+                android:layout_marginRight="50dp"
+                />
+            <ImageView
+                android:id="@+id/videorecorder"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/videoblack"
+                android:layout_toLeftOf="@+id/newnote"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                />
+            <ImageView
+                android:id="@+id/newnote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/addblack"
+                android:layout_centerInParent="true"
+
+                />
+            <ImageView
+                android:id="@+id/audiorecorder"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/recordblack"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/newnote"
+                android:layout_marginLeft="50dp"
+                />
+            <ImageView
+                android:id="@+id/mediastore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/serverblack"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/audiorecorder"
+                android:layout_marginLeft="50dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/adlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:layout_above="@+id/bottomlayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Study Store"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="20sp"/>
+            <!--com.startapp.android.publish.ads.banner.Banner
+                android:id="@+id/startAppBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-2742716340205774/6390015620">
+            </com.google.android.gms.ads.AdView-->
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/bookgrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:divider="#aa000000"
+            android:dividerHeight="0.2dp"
+            android:layout_above="@+id/adlayout"/>
+
+
+    </RelativeLayout>
+
+    <!--include layout="@layout/content_study_store" /-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

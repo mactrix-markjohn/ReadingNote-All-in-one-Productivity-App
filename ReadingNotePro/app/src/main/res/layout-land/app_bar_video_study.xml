@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mactrix.www.readingnotepro.VideoStudyXtra">
+
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videonote"
+        android:visibility="gone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/closenote"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/videolayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+        <VideoView
+            android:id="@+id/videostudy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:keepScreenOn="true"/>
+
+        <RelativeLayout
+            android:id="@+id/contollayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_above="@+id/bottom"
+            android:background="#55000000">
+
+            <ImageView
+                android:id="@+id/recordplaypause"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pause_round_button"/>
+
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:text="1:09"
+                />
+            <ImageView
+                android:id="@+id/fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fullscreen_exit"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:id="@+id/counterfinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@id/fullscreen"
+                android:textColor="#ffffff"
+                android:text="2:29"
+                />
+            <SeekBar
+                android:id="@+id/recordseek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/counter"
+                android:layout_toLeftOf="@+id/counterfinish"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:thumbTint="@color/white"
+                android:progressTint="@color/white"
+                android:progressBackgroundTint="@color/white"/>
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/bottomsheetvideostudy"
+        android:visibility="invisible"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoAppBar"
+        android:visibility="invisible"
+        android:background="#cc000000"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/backing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/recordtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/videoback"
+                android:layout_toLeftOf="@+id/morevideo"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
+                android:textColor="#ffffff"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:fontFamily="cursive"
+                android:textSize="20sp"
+                android:text="Scorpoin_S03E16(TvShows4Moblie.com)"
+                android:layout_marginStart="5dp"
+                android:layout_toStartOf="@+id/morevideo"
+                android:layout_toEndOf="@+id/videoback"
+                android:layout_marginEnd="5dp" />
+            <!--ImageView
+                android:id="@+id/morevideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more"
+                android:layout_alignParentEnd="true" /-->
+        </RelativeLayout>
+
+        <!--android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" /-->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

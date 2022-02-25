@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/savenote"
+        android:title="Save Note"/>
+    <item android:id="@+id/deletenote"
+        android:title="Delete Note"/>
+    <item android:id="@+id/stopreading"
+        android:title="Stop Reading"
+        android:orderInCategory="2"/>
+
+</menu>
